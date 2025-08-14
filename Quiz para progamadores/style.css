@@ -69,3 +69,73 @@ main {
     margin-bottom: 2rem;
     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
+
+section { 
+    margin-bottom: 3rem;
+    padding: 2rem;
+    background: var(--bg-ligth);
+    border-radius: 15px;
+    border-left: 4px solid var(--primary-color);
+    transition: all 0.3s ease;
+}
+
+section:hover { 
+    transform: translateY(-2px);
+    box-shadow: var(--shadow);
+}
+
+h2 { 
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+h2::before { 
+    content: "";
+    font-size: 1.2rem;
+}
+
+h3 { 
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+p { 
+    margin-bottom: 1rem;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+strong { 
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+em { 
+    color: var(--secondary-color);
+    font-style: italic;
+}
+
+abbr {
+    text-decoration: none;
+    border-bottom: 2px dotted var(--primary-color);
+    cursor: help;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+fieldset {
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    background: var(--bg-white);
+}
