@@ -1,25 +1,28 @@
+/* Reset CSS */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Variáveis */
 :root {
     --primary-color: #667eea;
     --secondary-color: #764ba2;
-    --accent-color:  #f093fb;
+    --accent-color: #f093fb;
     --text-dark: #2d3748;
-    --text-light: #4a5568; 
-    --bg-ligth: #f7fafc;
+    --text-light: #4a5568;
+    --bg-light: #f7fafc;
     --bg-white: #ffffff;
     --border-color: #e2e8f0;
-    --sucess-color:  #48bb78;
+    --success-color: #48bb78;
     --warning-color: #ed8936;
     --error-color: #f56565;
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-    --shadow-lg: 0 10x 15x -3px rgba (0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
+/* Body */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
@@ -28,12 +31,14 @@ body {
     min-height: 100vh;
 }
 
+/* Container */
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 20px;
 }
 
+/* Header */
 header {
     text-align: center;
     margin-bottom: 3rem;
@@ -43,7 +48,6 @@ header {
     box-shadow: var(--shadow-lg);
     animation: fadeInUp 0.8s ease-out;
 }
-
 header h1 {
     font-size: 2.5rem;
     font-weight: 700;
@@ -53,7 +57,6 @@ header h1 {
     background-clip: text;
     margin-bottom: 1rem;
 }
-
 header p {
     font-size: 1.2rem;
     color: var(--text-light);
@@ -61,6 +64,7 @@ header p {
     margin: 0 auto;
 }
 
+/* Main */
 main {
     background: var(--bg-white);
     border-radius: 20px;
@@ -70,21 +74,22 @@ main {
     animation: fadeInUp 0.8s ease-out 0.2s both;
 }
 
-section { 
+/* Sections */
+section {
     margin-bottom: 3rem;
     padding: 2rem;
-    background: var(--bg-ligth);
+    background: var(--bg-light);
     border-radius: 15px;
     border-left: 4px solid var(--primary-color);
     transition: all 0.3s ease;
 }
-
-section:hover { 
+section:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow);
 }
 
-h2 { 
+/* Títulos */
+h2 {
     font-size: 1.5rem;
     font-weight: 600;
     color: var(--text-dark);
@@ -93,45 +98,41 @@ h2 {
     align-items: center;
     gap: 0.5rem;
 }
-
-h2::before { 
-    content: "";
+h2::before {
+    content: "🎯";
     font-size: 1.2rem;
 }
-
-h3 { 
+h3 {
     font-size: 1.3rem;
     font-weight: 600;
     color: var(--text-dark);
     margin-bottom: 1rem;
 }
 
-p { 
+/* Texto */
+p {
     margin-bottom: 1rem;
     color: var(--text-light);
     line-height: 1.7;
 }
-
-strong { 
+strong {
     color: var(--primary-color);
     font-weight: 600;
 }
-
-em { 
+em {
     color: var(--secondary-color);
     font-style: italic;
 }
-
 abbr {
     text-decoration: none;
     border-bottom: 2px dotted var(--primary-color);
     cursor: help;
 }
 
+/* Formulários */
 form {
     margin-top: 1rem;
 }
-
 fieldset {
     border: 2px solid var(--border-color);
     border-radius: 10px;
@@ -139,34 +140,31 @@ fieldset {
     margin-bottom: 1rem;
     background: var(--bg-white);
 }
-
 legend {
     font-weight: 600;
     color: var(--primary-color);
     padding: 0 1rem;
-    background: var (var(--bg-white);
+    background: var(--bg-white);
 }
-
-label { 
-    display: block; 
+label {
+    display: block;
     margin-bottom: 0.5rem;
     font-weight: 500;
     color: var(--text-dark);
     cursor: pointer;
     transition: color 0.3s ease;
 }
-
 label:hover {
     color: var(--primary-color);
 }
 
-input [type="radio"],
-input [type="checkbox"] {
+/* Inputs */
+input[type="radio"],
+input[type="checkbox"] {
     margin-right: 0.5rem;
     transform: scale(1.2);
     accent-color: var(--primary-color);
 }
-
 input[type="text"],
 input[type="password"],
 input[type="email"],
@@ -183,32 +181,28 @@ textarea {
     background: var(--bg-white);
     margin-bottom: 1rem;
 }
-
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="email"]:focus,
 input[type="date"]:focus,
 select:focus,
-textarea:focu {
+textarea:focus {
     outline: none;
     border-color: var(--primary-color);
     box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
     transform: translateY(-1px);
 }
-
 input[type="file"] {
     padding: 0.5rem;
-    border:2px dashed var(--border-color);
-    background: var(--bg-ligth);
+    border: 2px dashed var(--border-color);
+    background: var(--bg-light);
     cursor: pointer;
     transition: all 0.3s ease;
 }
-
 input[type="file"]:hover {
     border-color: var(--primary-color);
     background: rgba(102, 126, 234, 0.05);
 }
-
 select {
     cursor: pointer;
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3e%3c/svg%3e");
@@ -217,12 +211,12 @@ select {
     background-size: 1.5em 1.5em;
     padding-right: 2.5rem;
 }
-
 textarea {
     resize: vertical;
     min-height: 100px;
 }
 
+/* Grupos de opções */
 .radio-group,
 .checkbox-group {
     display: grid;
@@ -230,7 +224,6 @@ textarea {
     gap: 1rem;
     margin-top: 1rem;
 }
-
 .radio-option,
 .checkbox-option {
     display: flex;
@@ -241,4 +234,177 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
     transition: all 0.3s ease;
+}
+.radio-option:hover,
+.checkbox-option:hover {
+    border-color: var(--primary-color);
+    background: rgba(102, 126, 234, 0.05);
+    transform: translateY(-1px);
+}
+.radio-option input:checked + label,
+.checkbox-option input:checked + label {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background: var(--bg-white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+th, td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+th {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+tr:hover {
+    background: var(--bg-light);
+}
+tfoot td {
+    background: var(--bg-light);
+    font-weight: 600;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Details */
+details {
+    background: var(--bg-white);
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    padding: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+summary {
+    font-weight: 600;
+    color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+summary:hover {
+    background: var(--bg-light);
+}
+details[open] summary {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--border-color);
+}
+
+/* Listas */
+ol {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+ol li {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+
+/* Imagens */
+figure {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1rem;
+    background: var(--bg-white);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+figcaption {
+    font-style: italic;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    background: var(--bg-white);
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: var(--shadow-lg);
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+footer p {
+    margin-bottom: 0.5rem;
+    color: var(--text-light);
+}
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+footer a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Botão de envio */
+.submit-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow);
+    margin-top: 1rem;
+}
+.submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+.submit-btn:active {
+    transform: translateY(0);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container { padding: 10px; }
+    header h1 { font-size: 2rem; }
+    header p { font-size: 1rem; }
+    main { padding: 1rem; }
+    section { padding: 1rem; }
+    .radio-group, .checkbox-group { grid-template-columns: 1fr; }
+    table { font-size: 0.9rem; }
+    th, td { padding: 0.5rem; }
+}
+@media (max-width: 480px) {
+    header h1 { font-size: 1.5rem; }
+    h2 { font-size: 1.2rem; }
+    .submit-btn { width: 100%; }
 }
